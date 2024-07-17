@@ -17,7 +17,7 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 25vh; /* Tinggi header setinggi viewport */
+    height: 30vh; /* Tinggi header setinggi viewport */
     background: url('header2.png') no-repeat center center/cover; /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
      /* Memastikan gambar berada di belakang konten lainnya */
   }

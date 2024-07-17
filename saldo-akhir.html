@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="saldo-akhir.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+    </header>
+    <div class="container">
+        <div class="input-container" name="kont">
+            <img src="kartu.jpg" alt="Contact Icon" class="icon">
+            <label for="kotk">Saldo Akhir : </label>
+            <div class="input-container">
+            <input type="text" placeholder="Rp. XXX XXX" name="kotk" id="currencyInput" class="currency-input" oninput="formatCurrency()">
+        </div>
+        </div>
+        <center>
+            <div class="navbar">
+                <button class="btn"><a href="last.html"> Lanjutkan</a></button>
+                  </div>
+                  <P style="font-size: 12px;">Pastikan untuk nominal yang diinput sesuai dengan yang tertera di aplikasi</P>
+                  </center>
+                
+            
+                <script>
+                    function formatCurrency() {
+                        const input = document.getElementById('currencyInput');
+                        let value = input.value;
+            
+                        // Menghilangkan semua karakter yang bukan digit
+                        value = value.replace(/[^0-9]/g, '');
+            
+                        // Format nilai dengan tanda titik setiap tiga digit
+                        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            
+                        // Menambahkan kembali "Rp" di depan
+                        input.value = value;
+                    }
+                </script>
+    </div>
+</body>
+</html>
